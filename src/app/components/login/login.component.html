@@ -1,1 +1,47 @@
-<p>login works!</p>
+<div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center">
+  <div class="p-3 rounded-4 shadow overflow-hidden bg-white" style="max-width: 600px; width: 100%;">
+    <!-- Right - Sign Up -->
+    <div class=" p-3">
+      <h2 class="text-success mb-3 text-center">Sign In</h2>
+
+      <form>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Email or Phonenumber" required />
+        </div>
+        <div class="mb-3 position-relative">
+          <input type="password" id="loginPassword" class="form-control pe-5" placeholder="Password" required />
+          <i class="fas fa-eye position-absolute text-success" style="top: 12px; right: 15px; cursor: pointer"></i>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="rememberMe">
+            <label class="form-check-label text-dark" for="rememberMe">
+              Remember Password
+            </label>
+          </div>
+          <a href="#" class="text-success text-decoration-none">Forget Password?</a>
+        </div>
+        <div class="mb-3">
+          <select class="form-select w-50" id="role" required>
+            <option value="admin">Admin</option>
+            <option value="nhanvien">Staff</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-success w-100 mt-2">Login</button>
+        <div class="d-flex flex-column flex-md-row justify-content-center gap-2 mt-3 mb-2">
+          <button class="btn btn-danger ">
+            <i class="fab fa-google me-2"></i> Login With Google
+          </button>
+          <button class="btn btn-primary">
+            <i class="fab fa-facebook-f me-2"></i> Login With Facebook
+          </button>
+        </div>
+        <!-- Register link -->
+        <p class="text-center text mt-3">
+          You are not registered? <a href="#" class="text-success text-decoration-none">Create Account</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
