@@ -1,1 +1,52 @@
-<p>register works!</p>
+<div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center"
+     style="background-image: url('/assets/images/bg-login.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <div class="row bg-white shadow rounded-4 overflow-hidden" style="max-width: 900px; width: 100%;">
+    
+    <!-- Left - Sign In -->
+    <div class="col-md-6 bg-success text-white d-flex flex-column justify-content-center align-items-center p-5">
+      <h2 class="mb-3">Welcome Back!</h2>
+      <p class="text-center">To keep connected with us please login with your personal info</p>
+      <button class="btn btn-outline-light mt-3">SIGN IN</button>
+    </div>
+
+    <!-- Right - Sign Up -->
+    <div class="col-md-6 p-5">
+      <h2 class="text-success mb-3 text-center">Create Account</h2>
+
+      <div class="d-flex justify-content-center mb-3 social-icons " >
+        <a href="#" class="text-success mx-2 fs-5"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-success mx-2 fs-5"><i class="fab fa-google-plus-g"></i></a>
+      </div>
+
+      <p class="text-center mb-3">or use your email for registration:</p>
+
+      <form>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Phone" required />
+        </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" placeholder="Password" required />
+        </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" placeholder="Enter Password" required />
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Full name" required />
+        </div>
+        <div class="mb-3">
+            <input type="date" class="form-control" placeholder="Ngày tháng năm sinh" required />
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Địa chỉ" required />
+        </div>
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+            <label class="form-check-label text" for="agreeTerms">
+                Tôi đồng ý với điều khoản điều kiện
+            </label>
+        </div>
+        <button type="submit" class="btn btn-success w-100 mt-2">SIGN UP</button>
+      </form>
+    </div>
+  </div>
+</div>
