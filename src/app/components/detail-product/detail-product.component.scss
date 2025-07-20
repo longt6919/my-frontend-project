@@ -1,0 +1,14 @@
+.thumb-img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: border 0.3s ease;
+}
+
+.thumb-img:hover {
+  border: 2px solid #1abc9c;
+}
+.thumb-img.border-primary {
+  border: 1px solid #0d6efd !important;
+}
