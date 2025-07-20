@@ -1,0 +1,53 @@
+<!-- Không có <div class="container"> nữa -->
+<div class="row">
+    <!-- Cột trái: Thông tin người nhận -->
+    <div class="col-md-4 mb-4">
+        <h5 class="fw-bold mb-3">Thông tin người nhận</h5>
+        <ul class="list-unstyled mb-0">
+            <li><strong>Họ và tên:</strong> Nguyễn Văn A</li>
+            <li><strong>Email:</strong> examplegmail.com</li>
+            <li><strong>SĐT:</strong> 0123 456 789</li>
+            <li><strong>Địa chỉ:</strong> 123 Đường ABC, Hà Nội</li>
+        </ul>
+    </div>
+
+    <!-- Cột phải: Danh sách đơn hàng -->
+    <div class="col-md-8">
+        <h5 class="fw-bold mb-3">Lịch sử đặt hàng</h5>
+        <div class="table-responsive rounded-2 mt-4" style="max-height: 170px; overflow-y: auto;">
+            <table class="table table-striped border rounded-2 order-table">
+                <thead class="table-light">
+                    <tr>
+                        <th>Mã đơn</th>
+                        <th>Ngày đặt</th>
+                        <th>Trạng thái</th>
+                        <th>Tổng tiền</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let order of paginatedOrders">
+                        <td>{{ order.id }}</td>
+                        <td>{{ order.date }}</td>
+                        <td>
+                            <span class="badge" [ngClass]="{
+                  'bg-success': order.status === 'Đã giao',
+                  'bg-warning text-dark': order.status === 'Đang giao',
+                  'bg-danger': order.status === 'Đã hủy',
+                  'bg-secondary': order.status === 'Chờ xử lý'
+                }">
+                                {{ order.status }}
+                            </span>
+                        </td>
+                        <td>{{ order.total | currency: 'VND':'symbol' }}</td>
+                        <td>
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-eye"></i> Xem
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

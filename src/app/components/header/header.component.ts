@@ -11,5 +11,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  showMenu = false;
 
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+  }
 }

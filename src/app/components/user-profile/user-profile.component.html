@@ -1,1 +1,52 @@
-<p>user-profile works!</p>
+<app-header></app-header>
+
+<div class="container py-5">
+    <div class="row">
+        <!-- Cột trái: Thông tin người dùng -->
+        <div class="col-md-4">
+            <div class="d-flex align-items-start">
+                <!-- Avatar -->
+                <div class="bg-light rounded-circle d-flex justify-content-center align-items-center me-3"
+                    style="width: 70px; height: 70px;">
+                    <i class="bi bi-person-circle fs-3 text-primary"></i>
+                </div>
+
+                <!-- Thông tin -->
+                <div class="flex-grow-1">
+                    <h5 class="mb-1 text-dark">Nguyễn Văn A</h5>
+                    <p class="mb-1 text-muted">Ngày sinh: 20/06/2003</p>
+                    <p class="mb-2 text-muted">Địa chỉ: Hà Nội</p>
+                    <!-- Nút sửa -->
+                    <button class="btn btn-outline-primary btn-sm" (click)="showEditForm = true">
+                        <i class="bi bi-pencil-square me-1"></i> Sửa
+                    </button>
+
+                    <!-- Form Sửa hiển thị kiểu modal overlay -->
+                    <div *ngIf="showEditForm"
+                        class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-dark bg-opacity-50"
+                        style="z-index: 1050;">
+                        <div class="bg-white rounded shadow p-4 position-relative"
+                            style="max-height: 90vh; overflow-y: auto; width: 100%; max-width: 500px;">
+
+                            <!-- Nút Đóng -->
+                            <button type="button" class="btn-close position-absolute top-0 end-0 m-3" aria-label="Close"
+                                (click)="showEditForm = false"></button>
+
+                            <!-- Component form chỉnh sửa -->
+                            <app-edit-user-info (close)="showEditForm = false"></app-edit-user-info>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cột phải: Component Lịch sử đơn hàng -->
+        <div class="col-md-8">
+            <div class="bg-white rounded-3 p-4 shadow-lg rounded-4 h-100">
+                <app-order-history></app-order-history>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

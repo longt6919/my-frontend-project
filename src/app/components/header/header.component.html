@@ -1,1 +1,36 @@
-<p>header works!</p>
+<header id="mainHeader" class="bg-white border-bottom py-3 sticky-top shadow-sm">
+  <div class="container d-flex align-items-center justify-content-between flex-wrap">
+    <!-- Logo -->
+    <div class="logo me-4">
+      <img src="https://theme.hstatic.net/200000000133/1001205759/14/logo.png?v=2074" alt="VPS Fashion" height="50" />
+    </div>
+
+    <!-- Menu -->
+    <nav class="d-flex flex-grow-1 align-items-center flex-wrap">
+      <a routerLink="/" class="nav-link text-dark px-2 fw-medium">Trang chủ</a>
+      <a routerLink="/men" class="nav-link text-dark px-2 fw-medium">Đồ Nam</a>
+      <a routerLink="/about" class="nav-link text-dark px-2 fw-medium">Giới thiệu</a>
+      <a routerLink="/contact" class="nav-link text-dark px-2 fw-medium">Liên hệ</a>
+
+      <!-- Search -->
+      <div class="ms-auto d-flex align-items-center mt-2 mt-md-0 header-search">
+        <i class="bi bi-search me-2 search-icon"></i>
+        <input type="text" class="form-control form-control-sm me-2" placeholder="Bạn muốn tìm gì..." />
+        <button class="btn btn-secondary btn-sm">Tìm kiếm</button>
+      </div>
+    </nav>
+
+    <!-- Icons -->
+    <div class="icons d-flex align-items-center ms-4 mt-4 mt-md-0 fs-5">
+      <i class="bi bi-heart me-4 icon-action" title="Yêu thích"></i>
+      <i class="bi bi-cart3 me-4 icon-action" title="Giỏ hàng" data-bs-toggle="offcanvas"
+        data-bs-target="#cartSidebar"></i>
+      <div class="position-relative" (click)="toggleMenu()">
+        <i class="bi bi-person-circle fs-3 " style="cursor: pointer;"></i>
+
+        <!-- Component con hiện ở đây -->
+        <app-user-menu *ngIf="showMenu"></app-user-menu>
+      </div>
+    </div>
+  </div>
+</header>

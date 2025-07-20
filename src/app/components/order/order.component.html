@@ -1,1 +1,84 @@
-<p>order works!</p>
+<app-header></app-header>
+<div class="order-page">
+    <div class="row">
+        <div class="col-lg-7 mb-4">
+            <h2 class="mb-4">Thông tin người nhận</h2>
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Họ và tên" />
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Email" />
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Số điện thoại" />
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Địa chỉ" />
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Địa chỉ nhận" />
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Ghi chú" />
+                </div>
+                <div class="mb-3">
+                    <select class="form-select">
+                        <option selected>Chọn phương thức vận chuyển</option>
+                        <option>Giao hàng Nhanh</option>
+                        <option>Giao hàng Tiết Kiệm</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <select class="form-select">
+                        <option selected>Chọn phương thức thanh toán</option>
+                        <option>Thanh toán khi nhận</option>
+                        <option>VNPay</option>
+                        <option>MoMo</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-lg-5">
+            <h5 class="text-dark mb-3">Sản phẩm đã đặt</h5>
+            <div class="card p-3 mb-3 d-flex flex-row align-items-center shadow-sm">
+                <img src="https://file.hstatic.net/200000325151/article/u8s23_top-mau-ao-phong-dep-9_f31214916f3249cba9e809ee1fe85b22.jpg"
+                    alt="product" width="60" class="me-3 rounded" />
+
+                <div class="flex-grow-1">
+                    <strong>Heavy Duty Linen Gloves</strong><br />
+
+                    <div class="d-flex align-items-center mt-1">
+                        <!-- Tăng giảm -->
+                        <div class="input-group input-group-sm w-auto me-2">
+                            <button class="btn btn-outline-secondary" type="button">−</button>
+                            <input type="text" class="form-control text-center" value="3" readonly style="width: 40px;">
+                            <button class="btn btn-outline-secondary" type="button">+</button>
+                        </div>
+
+                        <span class="me-2">50 đ</span>
+                        <span>= <strong>150 đ</strong></span>
+                    </div>
+                </div>
+
+                <button class="btn btn-danger btn-sm ms-2">Xóa</button>
+            </div>
+            <div class="text-end md-3">
+                <div>Tạm tính: <strong>150đ</strong></div>
+                <div>Giảm giá: <strong class="text-danger">-15đ</strong></div>
+                <div class="fw-bold fs-5">Tổng giá: <span class="text-success">135đ</span></div>
+            </div>
+            <div class="mb-3">
+                <label for="voucher" class="form-label mb-2">Nhập voucher</label>
+
+                <div class="input-group">
+                    <input type="text" id="voucher" class="form-control" placeholder="heaven" />
+                    <button class="btn btn-danger" type="button">Áp dụng</button>
+                </div>
+            </div>
+            <button class="btn btn-primary w-100 mt-3">Đặt hàng</button>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
