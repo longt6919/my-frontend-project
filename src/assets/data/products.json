@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Áo thun nam cổ tròn",
+    "price": 199000,
+    "image": "https://bizweb.dktcdn.net/thumb/1024x1024/100/399/392/products/6-2.png"
+  },
+  {
+    "id": 2,
+    "name": "Áo sơ mi nữ tay dài",
+    "price": 299000,
+    "image": "https://bizweb.dktcdn.net/thumb/1024x1024/100/399/392/products/hi02-t01.png"
+  },
+  {
+    "id": 3,
+    "name": "Quần jean nam",
+    "price": 350000,
+    "image": "https://bizweb.dktcdn.net/thumb/grande/100/557/196/products/aothunnamcotronhiddle3.jpg?v=1741409360517"
+  },
+  {
+    "id": 4,
+    "name": "Quần jean nam",
+    "price": 350000,
+    "image": "https://bizweb.dktcdn.net/100/399/392/files/ao-thun-nam-hieu-nao-tot.jpg?v=1615796169597"
+  },
+  {
+    "id": 5,
+    "name": "Quần jean nam",
+    "price": 350000,
+    "image": "https://aoxuanhe.com/upload/product/axh-149/ao-thun-nam-trang-cao-cap-dep.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Quần jean nam",
+    "price": 350000,
+    "image": "https://aothudong.com/upload/images/views/o%20s%C6%A1%20mi/3.1.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Quần jean nam",
+    "price": 350000,
+    "image": "https://aoxuanhe.com/upload/product/axh-075/ao-thun-co-tron-nam-mau-xam-tron-1.jpg"
+  }
+]
