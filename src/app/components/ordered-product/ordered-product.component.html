@@ -1,0 +1,47 @@
+<div class="container py-5">
+  <div class="bg-white rounded-3 shadow p-5">
+    <div class="d-flex align-items-center mb-4">
+      <i class="bi bi-receipt-cutoff fs-3 text-primary me-2"></i>
+      <h4 class="mb-0 fw-semibold fs-18">Chi tiết đơn hàng</h4>
+    </div>
+    <hr>
+
+    <div class="mb-3">
+      <p class="mb-0"><strong>ID Đơn Hàng:</strong> #654321</p>
+      <p class="mb-1"><strong>Ngày Đặt Hàng:</strong> June 08, 2025</p>
+      <p class="mb-1"><strong>Trạng Thái Đơn Hàng:</strong> <span class="badge bg-warning text-dark">Pending</span></p>
+    </div>
+
+    <div class="table-responsive rounded-2 mt-4">
+      <table class="table  border rounded-2 order-table">
+        <thead class="table-light">
+          <tr>
+            <th>#</th>
+            <th>Sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Đơn Giá</th>
+            <th>Tổng tiền</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products; let i = index"
+              [ngClass]="{ 'table-active': i % 2 === 1 }">
+            <td>{{ i + 1 }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.quantity }}</td>
+            <td>{{ product.unitCost | currency:'USD':'symbol' }}</td>
+            <td>{{ product.quantity * product.unitCost | currency:'USD':'symbol' }}</td>
+          </tr>
+          <tr class="fw-bold bg-white">
+            <td colspan="4" class="text-end">Tổng tiền:</td>
+            <td>{{ totalPrice | currency: 'USD':'symbol' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="text-end mt-3">
+      <a href="#" class="btn btn-primary">Xác nhận</a>
+    </div>
+  </div>
+</div>
